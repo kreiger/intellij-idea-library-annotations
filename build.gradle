@@ -1,0 +1,30 @@
+plugins {
+    id("java")
+    id("org.jetbrains.intellij.platform") version "2.2.1"
+}
+
+group = "com.linuxgods.kreiger.intellij.idea"
+version = "1.0-SNAPSHOT"
+
+repositories {
+    mavenCentral()
+
+    intellijPlatform {
+        defaultRepositories()
+    }
+}
+
+dependencies {
+    intellijPlatform {
+        intellijIdeaCommunity '2024.3.1'
+        bundledPlugin 'com.intellij.java'
+    }
+}
+
+tasks.withType(JavaCompile) {
+    options.release = 21
+}
+
+runIde {
+    jvmArgs '-Xmx4G'
+}

@@ -1,0 +1,20 @@
+<idea-plugin>
+    <id>com.linuxgods.kreiger.intellij.library.annotations</id>
+    <idea-version since-build="243"/>
+    <name>Annotate library types</name>
+
+    <vendor email="christoffer.hammarstrom@gmail.com">Christoffer Hammarström</vendor>
+
+    <description><![CDATA[
+        Annotates library types
+    ]]></description>
+
+    <depends>com.intellij.java</depends>
+
+    <actions>
+    </actions>
+
+    <extensions defaultExtensionNs="com.intellij">
+        <annotator language="JAVA" implementationClass="com.linuxgods.kreiger.intellij.library.annotations.LibraryTypeAnnotator" />
+    </extensions>
+</idea-plugin>
