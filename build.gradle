@@ -21,6 +21,14 @@ dependencies {
     }
 }
 
+intellijPlatform {
+    pluginConfiguration {
+        ideaVersion {
+           untilBuild = provider { null }
+        }
+    }
+}
+
 tasks.withType(JavaCompile) {
     options.release = 21
 }
